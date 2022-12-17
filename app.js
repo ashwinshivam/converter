@@ -108,16 +108,21 @@ fromOption.addEventListener("change", function () {
     //swapping
 
     swap.addEventListener("click", function (){
-        let temp = fromOption.options[fromOption.selectedIndex].text;
-        //let valueTemp = inp.value;
-        
-        numFrom = toOption.options[toOption.selectedIndex].text;
-        inp.placeholder = numFrom + " Number";
-        fromOption.options[fromOption.selectedIndex].text = numFrom;
-        //inp.value = out.value;
+      var temp = fromOption.value;
 
-        numTo = temp;
-        out.placeholder = numTo + "Number";
-        toOption.options[toOption.selectedIndex].text = numTo;
+fromOption.value = toOption.value;
+
+toOption.value = temp;
+      //   let temp = fromOption.options[fromOption.selectedIndex].text;
+      //   //let valueTemp = inp.value;
+        
+      //   numFrom = toOption.options[toOption.selectedIndex].text;
+      //   inp.placeholder = numFrom + " Number";
+      //   fromOption.options[fromOption.selectedIndex].text = numFrom;
+      //   //inp.value = out.value;
+
+      //   numTo = temp;
+      //   out.placeholder = numTo + "Number";
+      //   toOption.options[toOption.selectedIndex].text = numTo;
         //out.value = valueTemp;
     })
