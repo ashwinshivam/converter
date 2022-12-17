@@ -9,7 +9,7 @@ const err = document.querySelector("#error");
 const convertbtn = document.querySelector("#ConvertBtn");
 const swap = document.querySelector("#SwapBtn");
 
-let numFrom= "Binary" , numTo= "Binary" ;
+let numFrom= "Binary" , numTo= "Decimal" ;
 
 //events
 
@@ -111,8 +111,10 @@ fromOption.addEventListener("change", function () {
       var temp = fromOption.value;
 
 fromOption.value = toOption.value;
+fromOption.dispatchEvent(new Event('change'));
 
 toOption.value = temp;
+toOption.dispatchEvent(new Event('change'));
       //   let temp = fromOption.options[fromOption.selectedIndex].text;
       //   //let valueTemp = inp.value;
         
